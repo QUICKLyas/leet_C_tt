@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "leetcode_2575.exe"
+			"path" : "leetcode_225.exe"
 		},
 		{
-			"path" : "leetcode_2575.pdb"
+			"path" : "leetcode_225.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "leetcode_2575::@6890427a1f51a3e7e1df",
+	"id" : "leetcode_225::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "leetcode_2575",
-	"nameOnDisk" : "leetcode_2575.exe",
+	"name" : "leetcode_225",
+	"nameOnDisk" : "leetcode_225.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -98,7 +98,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "2575.cpp",
+			"path" : "225.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

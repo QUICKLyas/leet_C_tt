@@ -1,4 +1,4 @@
-# Install script for directory: F:/IDE/_CodeSpace/Proc/cpp/leetcode
+# Install script for directory: F:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "F:/IDE/_CodeSpace/Proc/cpp/leetcode/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "F:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
