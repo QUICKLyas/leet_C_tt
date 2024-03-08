@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "leetcode_2368.exe"
+			"path" : "leetcode_2834.exe"
 		},
 		{
-			"path" : "leetcode_2368.pdb"
+			"path" : "leetcode_2834.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "leetcode_2368::@6890427a1f51a3e7e1df",
+	"id" : "leetcode_2834::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "leetcode_2368",
-	"nameOnDisk" : "leetcode_2368.exe",
+	"name" : "leetcode_2834",
+	"nameOnDisk" : "leetcode_2834.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -98,7 +98,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "2368.cpp",
+			"path" : "daily/2834.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -3,7 +3,8 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(leetcode_Array Array.cpp)
-add_executable(leetcode_225 225.cpp)
-add_executable(leetcode_2368 2368.cpp)
-add_executable(leetcode_2575 2575.cpp)
+add_executable(leetcode_Array algorithm.cpp)
+add_executable(leetcode_225 daily/225.cpp)
+add_executable(leetcode_2834 daily/2834.cpp)
+add_executable(leetcode_2368 daily/2368.cpp)
+add_executable(leetcode_2575 daily/2575.cpp)
