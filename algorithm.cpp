@@ -5,9 +5,13 @@
 #include <climits>
 #include <string>
 #include <map>
+#include <unordered_map>
+#include <unordered_set>
 using namespace std;
+
 class Solution {
 public:
+
     /**
      * 4
      * @param nums1
@@ -180,5 +184,43 @@ public:
         }
         // dp表中最大状态码对应位置下存储的team就是我们需要的队伍
         return dp[(1 << reqSkillSize) -1];
+    }
+    /**
+     * 动态规划 ****
+     * 140 单词拆分II
+     * @param s
+     * @param wordDict
+     * @return
+     */
+    unordered_map<int, vector<string>> answer;
+    unordered_set<string> wordSet;
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
+        // 记忆化搜索
+        wordSet = unordered_set<string> (wordDict.begin(), wordDict.end());
+        backtrack(s,0); // 从0开始计算
+        return answer[0];
+    }
+
+    void backtrack(const string & s,int index) {
+        if (!answer.count(index)) { // 如果当前的这个index标签不在answer中，进入判断
+            if(index == s.size()) { // 如果index 正好为 s的大小，进入
+                answer[index] = {""}; // 此时index的位置正好就是字符串末尾，不需要进行切分的操作，直接设置一个""，返回
+                return;
+            }
+            answer[index] = {}; // 设置为空，到这说明，当前标签不等于s的大小
+            for (int i = index+1; i <= s.size(); ++i) {
+                string word = s.substr(index, i - index); // 字符串切割index开始,划分i-index个数据
+                if (wordSet.count(word)) { // 判断当前的单词是否存在这个字典中
+                    // 在字典中返回1，则进一步查看这个单词后面的字符串是否还可以进行划分
+                    backtrack(s,i); // 继续查看这个标签后面的语句是否构成句子
+                    for (const string & succ : answer[i]) { // 循环当前answer这张map
+                        // 具有hash表的特性
+                        // 在对应切分起始点的hash项下加入word + “ ” + succ
+                        // 如果succ为空，那么直接加入word
+                        answer[index].push_back(succ.empty() ? word: word + " " + succ);
+                    }
+                }
+            }
+        }
     }
 };
