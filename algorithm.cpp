@@ -3,7 +3,8 @@
 //
 #include <vector>
 #include <climits>
-
+#include <string>
+#include <map>
 using namespace std;
 class Solution {
 public:
@@ -140,5 +141,44 @@ public:
         int mid = (l + r) >> 1 ; //二进制数向右移动，就是除以2
         return mergeTwoList(merge(lists,l,mid), merge(lists,mid+1,r));
         // 二分合并
+    }
+    /**
+     * 1125 最小必要团队
+     * @param req_skill
+     * @param people
+     * @return
+     */
+    vector<int> smallestSufficientTeam(vector<string>& req_skills, vector<vector<string>> & people) {
+        // 需要最后扫描的数据，我们应该考虑这张表中元素重复数量，
+        // 设置待选人员，每个待选人员存在多少需要的技能，最后团队必须覆盖所有的需求
+        // 1, 动态规划
+        // 2, 动态规划 + 优化
+        int reqSkillSize = req_skills.size(), peopleSize = people.size();
+        map <string,int> skillIndex;
+        for (int i =0;i<reqSkillSize;++i) {
+            skillIndex[req_skills[i]] = i; // 存放需求技能的信息，每个序号代表一种技能，作为技能词典
+        }
+        vector<vector<int>> dp(1 << reqSkillSize); // 左移表示乘2 ，总共移动了reqSkillSize位数
+        // 这里设置了需要的空间
+        for (int i =0;i < peopleSize;++i) {
+            int curSkill = 0;
+            for (string & s: people[i]) {// 查看所有当前这个员工的技能
+                curSkill |= 1 << skillIndex[s]; // 或运算到但付钱技能中，如果该技能是需要的，则加入到curSkill
+            }
+            for (int prev = 0; prev < dp.size(); ++ prev) {
+                if (prev > 0 && dp[prev].empty()) continue;
+                // 合并当前技能和之前技能
+                int comb = prev | curSkill; // 当前技能添加到prev中
+                if (comb == prev) continue; // 如果没变化，则跳过
+                if (dp[comb].empty() || dp[prev].size() + 1 < dp[comb].size()) {
+                    // 如果comb 当前的成员空，跳过，如果旧的team人员加1仍然小于当前的team大小，跳过
+                    dp[comb] = dp[prev];
+                    // 在comb中的team中加入当前这个用户的编号
+                    dp[comb].push_back(i);
+                }
+            }
+        }
+        // dp表中最大状态码对应位置下存储的team就是我们需要的队伍
+        return dp[(1 << reqSkillSize) -1];
     }
 };
