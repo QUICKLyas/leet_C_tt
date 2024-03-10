@@ -240,11 +240,38 @@ public:
      */
     vector<int> findSubstring(string s, vector<string> & words) {
         vector <int> answer;
-        int wordsCnt = words.size() , wordLength = words[0].length(), sLength = s.length() ;
-        for (int i = 0; i < wordsCnt && wordsCnt * wordLength <= sLength ; ++ i) {
+        int wordsCnt = words.size() , wordLength = words[0].size(), sLength = s.size() ;
+        for (int i = 0; i < wordLength && i + wordsCnt *  wordLength <= sLength ; ++ i) {
+            // 每次i加一，就要重新构建一个hash表 i 小于一个单词的长度，且，i + 所有需要的单词的长度，不能超过本身字符串s的长度
             unordered_map<string, int> differ; // 0 是默认数值
-            for (int j = 0; j < wordLength ; ++ j) {
-                ++ differ[s.substr(i + j * wordsCnt, wordsCnt)]; //
+            for (int j = 0; j < wordsCnt ; ++ j) { // 从 s 的 i位置进行hash表构建，数量 为 wordLength
+                // 其中每个项目的名字是wordCnt长度的字符串
+                ++ differ[s.substr(i + j * wordLength, wordLength)];
+                // 这里hash表differ 存储了从i开始，每个以WordLength划分所有的字符串的情况，记录为1
+            }
+            for (string & word : words) {
+                // 遍历words中字符串
+                if  ( -- differ[word] == 0) { // 这个表中的对应字符下的数据被减去为0，进入，表示这个单词，在当前划分的串联字符串中出现了
+                    differ.erase(word); // 删除这个数据
+                }
+            }
+            for (int start = i; start < sLength - wordLength * wordsCnt + 1 ; start += wordLength) {
+                // 这个循环，是从i(start)开始，每次start增加一个单词的长度
+                if (start != i) {// 如果 start 的位置不是i的位置，进行下面的操作，也就是第一个除外，其他情况如下
+                    // 获取，一个字符串从s中获取，位置从，start开始计算，获取倒数最后一个字符串单词
+                    //
+                    string word = s.substr(start + (wordsCnt - 1) * wordLength , wordLength);
+                    if ( ++ differ[word] == 0) { // 如果这个单词在hash表中的情况在 ++ 后为1，那么删除
+                        differ.erase(word);
+                    }
+                    word = s.substr(start - wordLength,wordLength); // 查看前面一个字符串
+                    if (-- differ[word] == 0) {
+                        differ.erase(word);
+                    }
+                }
+                if (differ.empty()) { // 如果此时为0，那么这个时候的start的位置就是串联字符串的起始位置
+                    answer.emplace_back(start);
+                }
             }
         }
         return answer;
