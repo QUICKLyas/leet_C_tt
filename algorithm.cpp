@@ -223,4 +223,30 @@ public:
             }
         }
     }
+
+    /**
+     * 30 串联所有单词的子串 - 关联题 - 438
+     * s 和 words words中的字符串 长度相等
+     * s 中 串联子串 是指一个包含words中所有字符串以任意顺序排列连接起来的子串
+     * 返回所有串联子串在s中的开始索引，串联字串不能连续重复同一个字符
+     * 应该是使用words中的所有字符串，组合成为一个新的字符串
+     * 1 <= s.length <= 104
+     * 1 <= words.length <= 5000
+     * 1 <= words[i].length <= 30
+     * words[i] 和 s 由小写英文字母组成
+     * @param s
+     * @param words
+     * @return
+     */
+    vector<int> findSubstring(string s, vector<string> & words) {
+        vector <int> answer;
+        int wordsCnt = words.size() , wordLength = words[0].length(), sLength = s.length() ;
+        for (int i = 0; i < wordsCnt && wordsCnt * wordLength <= sLength ; ++ i) {
+            unordered_map<string, int> differ; // 0 是默认数值
+            for (int j = 0; j < wordLength ; ++ j) {
+                ++ differ[s.substr(i + j * wordsCnt, wordsCnt)]; //
+            }
+        }
+        return answer;
+    }
 };
