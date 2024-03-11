@@ -276,4 +276,77 @@ public:
         }
         return answer;
     }
+    /**
+     * 32 最长有效括号
+     * @param s
+     * @return
+     */
+    int longestValidParentheses_1(string s) {
+        int maxNs = 0, n = s.length();
+        // 1. 动态规划
+        vector <int> dp(n,0); // 设置n个vector，每个容器初始值为0
+        for (int i = 1 ; i < n ; i ++) {
+            if (s[i] == ')') {
+                if (s[i-1] == '(') {
+                    dp[i] = ( i >= 2? dp [i-2] : 0 ) + 2;
+                } else if (i - dp [i-1] > 0 && s[i-dp[i-1]-1] == '(' ) {
+                    dp [i] = dp[i-1] + ((i-dp[i-1]) >= 2 ? dp[i-dp[i-1]-2]:0) + 2;
+                }
+                maxNs = max(maxNs, dp[i]);
+            }
+        }
+        // 2， 栈
+        // 3. 顺序访问字符串
+        return maxNs;
+    }
+    int longestValidParentheses_2(string s) {
+        int maxNs = 0, sLength = s.length();
+        // 1. 动态规划
+        // 2， 栈
+        // 3. 顺序访问字符串
+        int lLeft = 0 , lRight = 0;
+        int rLeft = 0 , rRight = 0;
+        for (int i = 0 ; i < sLength ; i ++ ) {
+            if (s[i] == '(') {
+                lLeft ++;
+            } else {
+                lRight++;
+            }
+            if ( lRight == lLeft) {
+                maxNs = max(maxNs,lRight * 2);
+            } else if (lRight > lLeft) {
+                lRight = lLeft = 0;
+            }
+            if (s[sLength - i - 1] == ')') {
+                rRight ++;
+            } else {
+                lLeft ++;
+            }
+            if (rLeft == rRight) {
+                maxNs = max(maxNs,rLeft * 2);
+            } else if (rLeft > rRight) {
+                rRight = rLeft = 0;
+            }
+        }
+
+//        for (int i = 0 ; i < sLength ; i++ ){
+//            if (s[i] == '(') left ++;
+//            else right++;
+//            if (left < right) {
+//                left = right = 0;
+//            } else if (left == right){
+//                maxNs = max(maxNs,right * 2);
+//            }
+//        } for (int i = sLength - 1 ; i >= 0 ; i --) {
+//            if (s[i] == ')')right++;
+//            else left++;
+//            if (left > right) {
+//                left = right = 0;
+//            } else if (left == right) {
+//                maxNs = max(maxNs, left*2);
+//            }
+//        }
+        return maxNs;
+    }
+
 };

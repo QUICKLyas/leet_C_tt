@@ -140,37 +140,37 @@ build leetcode_299.exe: CXX_EXECUTABLE_LINKER__leetcode_299_Debug CMakeFiles/lee
   TARGET_PDB = leetcode_299.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target leetcode_2834
+# Object build statements for EXECUTABLE target leetcode_2129
 
 
 #############################################
-# Order-only phony target for leetcode_2834
+# Order-only phony target for leetcode_2129
 
-build cmake_object_order_depends_target_leetcode_2834: phony || CMakeFiles/leetcode_2834.dir
+build cmake_object_order_depends_target_leetcode_2129: phony || CMakeFiles/leetcode_2129.dir
 
-build CMakeFiles/leetcode_2834.dir/daily/2834.cpp.obj: CXX_COMPILER__leetcode_2834_unscanned_Debug F$:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/daily/2834.cpp || cmake_object_order_depends_target_leetcode_2834
-  DEP_FILE = CMakeFiles\leetcode_2834.dir\daily\2834.cpp.obj.d
+build CMakeFiles/leetcode_2129.dir/daily/2129.cpp.obj: CXX_COMPILER__leetcode_2129_unscanned_Debug F$:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/daily/2129.cpp || cmake_object_order_depends_target_leetcode_2129
+  DEP_FILE = CMakeFiles\leetcode_2129.dir\daily\2129.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\leetcode_2834.dir
-  OBJECT_FILE_DIR = CMakeFiles\leetcode_2834.dir\daily
+  OBJECT_DIR = CMakeFiles\leetcode_2129.dir
+  OBJECT_FILE_DIR = CMakeFiles\leetcode_2129.dir\daily
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target leetcode_2834
+# Link build statements for EXECUTABLE target leetcode_2129
 
 
 #############################################
-# Link the executable leetcode_2834.exe
+# Link the executable leetcode_2129.exe
 
-build leetcode_2834.exe: CXX_EXECUTABLE_LINKER__leetcode_2834_Debug CMakeFiles/leetcode_2834.dir/daily/2834.cpp.obj
+build leetcode_2129.exe: CXX_EXECUTABLE_LINKER__leetcode_2129_Debug CMakeFiles/leetcode_2129.dir/daily/2129.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\leetcode_2834.dir
+  OBJECT_DIR = CMakeFiles\leetcode_2129.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = leetcode_2834.exe
-  TARGET_IMPLIB = libleetcode_2834.dll.a
-  TARGET_PDB = leetcode_2834.exe.dbg
+  TARGET_FILE = leetcode_2129.exe
+  TARGET_IMPLIB = libleetcode_2129.dll.a
+  TARGET_PDB = leetcode_2129.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target leetcode_2368
@@ -271,6 +271,39 @@ build leetcode_2575.exe: CXX_EXECUTABLE_LINKER__leetcode_2575_Debug CMakeFiles/l
   TARGET_IMPLIB = libleetcode_2575.dll.a
   TARGET_PDB = leetcode_2575.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target leetcode_2834
+
+
+#############################################
+# Order-only phony target for leetcode_2834
+
+build cmake_object_order_depends_target_leetcode_2834: phony || CMakeFiles/leetcode_2834.dir
+
+build CMakeFiles/leetcode_2834.dir/daily/2834.cpp.obj: CXX_COMPILER__leetcode_2834_unscanned_Debug F$:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/daily/2834.cpp || cmake_object_order_depends_target_leetcode_2834
+  DEP_FILE = CMakeFiles\leetcode_2834.dir\daily\2834.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\leetcode_2834.dir
+  OBJECT_FILE_DIR = CMakeFiles\leetcode_2834.dir\daily
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target leetcode_2834
+
+
+#############################################
+# Link the executable leetcode_2834.exe
+
+build leetcode_2834.exe: CXX_EXECUTABLE_LINKER__leetcode_2834_Debug CMakeFiles/leetcode_2834.dir/daily/2834.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\leetcode_2834.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = leetcode_2834.exe
+  TARGET_IMPLIB = libleetcode_2834.dll.a
+  TARGET_PDB = leetcode_2834.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -297,6 +330,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build leetcode_2129: phony leetcode_2129.exe
+
 build leetcode_225: phony leetcode_225.exe
 
 build leetcode_2368: phony leetcode_2368.exe
@@ -319,7 +354,7 @@ build leetcode_Array: phony leetcode_Array.exe
 #############################################
 # Folder: F:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/cmake-build-debug
 
-build all: phony leetcode_Array.exe leetcode_225.exe leetcode_299.exe leetcode_2834.exe leetcode_2368.exe leetcode_2386.exe leetcode_2575.exe
+build all: phony leetcode_Array.exe leetcode_225.exe leetcode_299.exe leetcode_2129.exe leetcode_2368.exe leetcode_2386.exe leetcode_2575.exe leetcode_2834.exe
 
 # =============================================================================
 # Built-in targets
