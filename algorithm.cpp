@@ -348,5 +348,41 @@ public:
 //        }
         return maxNs;
     }
-
+    /**
+     * 41. 缺失的第一个正数
+     * 给你一个未排序的整数数组 nums ，请你找出其中没有出现的最小的正整数。
+     * 请你实现时间复杂度为 O(n) 并且只使用常数级别额外空间的解决方案。
+     * 如果所有的正数从1到N的沾满了N个单元，那么最小的未出现的正数为N+1
+     * 之后遍历这个修改后的数组，
+     * 开始重新遍历，每次当前元素所对应的位置的数据转换为符号，一次根据元素的所有数据转换为绝对值的计算，
+     * @param nums
+     * @return
+     */
+    int firstMissingPositive_hash(vector<int>& nums) {
+        // 哈希表
+        // 先将所有的数字转换为整数，统一为N+1，
+        int minNumber;
+        int numsSize = nums.size();
+        for (int & num : nums) {
+            if (num <= 0) num = numsSize + 1;
+        }
+        for (int i = 0;i < numsSize ;i++) {
+            int num = abs(nums[i]);
+            if (num <= numsSize) {
+                nums[num - 1] = - abs(nums[num-1]);
+            }
+        }
+        for (int i = 0; i < numsSize; ++i) {
+            if (nums[i] > 0 ) return i+1;
+        }
+        return numsSize + 1;
+    }
+    /**
+     * 41
+     * @param nums
+     * @return
+     */
+    int firstMissingPositive_transmit(vector<int>& nums) {
+        //
+    }
 };
