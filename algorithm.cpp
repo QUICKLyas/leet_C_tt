@@ -395,4 +395,29 @@ public:
         }
         return numsSize + 1;
     }
+    /**
+     * 53 最大子数组和
+     * 给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+     * 子数组是数组中的一个连续部分。
+     * 1 <= nums.length <= 10^5
+     * -10^4 <= nums[i] <= 10^4
+     * @param nums
+     * @return
+     */
+    int maxSubArray(vector<int>& nums) {
+        // 动态规划
+        int pre = 0, maxAnswer = nums [0] ;
+        for (const auto &x : nums) {
+            pre = max (pre + x, x); // 记录下挡墙最大的数值
+            maxAnswer = max(maxAnswer,pre); // 记录下来当前最大的结果
+        }
+        return maxAnswer;
+    }
 };
+
+int main () {
+    Solution sol;
+    vector<int> nums;
+    nums = {1,2};
+    sol.maxSubArray(nums);
+}
