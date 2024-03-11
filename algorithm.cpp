@@ -383,6 +383,16 @@ public:
      * @return
      */
     int firstMissingPositive_transmit(vector<int>& nums) {
-        //
+        // 置换的方法，将所有的数据放置到正确的位置，直到出现第一个位置上错的数据，或者达到最后的位置
+        int numsSize = nums.size();
+        for (int i = 0 ; i < numsSize ; i++) {
+            while (0 < nums[i] && nums[i] <= numsSize && nums[nums[i]-1] != nums[i]) {
+                swap (nums[i],nums[nums[i]-1]);
+            }
+        }
+        for (int i = 0; i < numsSize;i++ ) {
+            if (nums[i] != i+1) return i+1;
+        }
+        return numsSize + 1;
     }
 };
