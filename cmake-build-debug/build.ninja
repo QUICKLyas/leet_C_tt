@@ -140,6 +140,39 @@ build leetcode_299.exe: CXX_EXECUTABLE_LINKER__leetcode_299_Debug CMakeFiles/lee
   TARGET_PDB = leetcode_299.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target leetcode_1261
+
+
+#############################################
+# Order-only phony target for leetcode_1261
+
+build cmake_object_order_depends_target_leetcode_1261: phony || CMakeFiles/leetcode_1261.dir
+
+build CMakeFiles/leetcode_1261.dir/daily/1261.cpp.obj: CXX_COMPILER__leetcode_1261_unscanned_Debug F$:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/daily/1261.cpp || cmake_object_order_depends_target_leetcode_1261
+  DEP_FILE = CMakeFiles\leetcode_1261.dir\daily\1261.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\leetcode_1261.dir
+  OBJECT_FILE_DIR = CMakeFiles\leetcode_1261.dir\daily
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target leetcode_1261
+
+
+#############################################
+# Link the executable leetcode_1261.exe
+
+build leetcode_1261.exe: CXX_EXECUTABLE_LINKER__leetcode_1261_Debug CMakeFiles/leetcode_1261.dir/daily/1261.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\leetcode_1261.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = leetcode_1261.exe
+  TARGET_IMPLIB = libleetcode_1261.dll.a
+  TARGET_PDB = leetcode_1261.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target leetcode_2129
 
 
@@ -330,6 +363,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build leetcode_1261: phony leetcode_1261.exe
+
 build leetcode_2129: phony leetcode_2129.exe
 
 build leetcode_225: phony leetcode_225.exe
@@ -354,7 +389,7 @@ build leetcode_Array: phony leetcode_Array.exe
 #############################################
 # Folder: F:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/cmake-build-debug
 
-build all: phony leetcode_Array.exe leetcode_225.exe leetcode_299.exe leetcode_2129.exe leetcode_2368.exe leetcode_2386.exe leetcode_2575.exe leetcode_2834.exe
+build all: phony leetcode_Array.exe leetcode_225.exe leetcode_299.exe leetcode_1261.exe leetcode_2129.exe leetcode_2368.exe leetcode_2386.exe leetcode_2575.exe leetcode_2834.exe
 
 # =============================================================================
 # Built-in targets

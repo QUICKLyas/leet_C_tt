@@ -413,6 +413,35 @@ public:
         }
         return maxAnswer;
     }
+    /**
+     * m*n 的网格中，机器人在Start(0,0) 左下角Finish(m-1,n-1)
+     * 网格中右障碍物为1 没有障碍物为0
+     * m == obstacleGrid.length
+     * n == obstacleGrid[i].length
+     * 1 <= m, n <= 100
+     * obstacleGrid[i][j] 为 0 或 1
+     * @param obstacleGrid
+     * @return
+     */
+    int uniquePathsWithObstacles (vector<vector<int>>& obstacleGrid) {
+        // 动态规划
+        int n = obstacleGrid.size(), m = obstacleGrid.at(0).size();
+        vector<int> f(m); // 设置向量数组f，大小等于每一行中元素的数量
+
+        f[0] = (obstacleGrid[0][0] == 0); // 设置f[0] 等于地图的左上角为0
+        for (int i = 0 ; i < n ; ++i) {
+            for (int j = 0; j < m; ++j) {
+                if (obstacleGrid[i][j] == 1) {
+                    f[j] = 0; // 当前这一列中存在一个张海
+                    continue;
+                }
+                if (j - 1 >= 0 && obstacleGrid[i][j-1] == 0) {
+                    f[j] += f[j-1];
+                }
+            }
+        }
+        return f.back(); // 返回到最后一个几点
+    }
 };
 
 int main () {
