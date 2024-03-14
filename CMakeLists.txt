@@ -2,13 +2,16 @@ cmake_minimum_required(VERSION 3.27)
 project(leetcode)
 
 set(CMAKE_CXX_STANDARD 14)
-
-add_executable(leetcode_Array algorithm.cpp)
-add_executable(leetcode_225 daily/225.cpp)
-add_executable(leetcode_299 daily/299.cpp)
-add_executable(leetcode_1261 daily/1261.cpp)
-add_executable(leetcode_2129 daily/2129.cpp)
-add_executable(leetcode_2368 daily/2368.cpp)
-add_executable(leetcode_2386 daily/2386.cpp)
-add_executable(leetcode_2575 daily/2575.cpp)
-add_executable(leetcode_2834 daily/2834.cpp)
+set(SOURCE_FILES
+        algorithm.cpp
+        daily/225.cpp
+        daily/299.cpp
+        daily/1261.cpp
+        daily/2789.cpp
+        daily/2129.cpp
+        daily/2368.cpp
+        daily/2386.cpp
+        daily/2575.cpp
+        daily/2834.cpp
+)
+add_executable(leetcode ${SOURCE_FILES})

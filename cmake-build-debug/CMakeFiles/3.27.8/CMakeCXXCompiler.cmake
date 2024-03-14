@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "F:/tool/environment/mingw64/bin/c++.exe")
+set(CMAKE_CXX_COMPILER "F:/tool/environment/msys2/mingw64/bin/c++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "8.1.0")
@@ -22,11 +22,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "F:/tool/environment/mingw64/bin/ar.exe")
-set(CMAKE_CXX_COMPILER_AR "F:/tool/environment/mingw64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "F:/tool/environment/mingw64/bin/ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "F:/tool/environment/mingw64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "F:/tool/environment/mingw64/bin/ld.exe")
+set(CMAKE_AR "F:/tool/environment/msys2/mingw64/bin/ar.exe")
+set(CMAKE_CXX_COMPILER_AR "F:/tool/environment/msys2/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "F:/tool/environment/msys2/mingw64/bin/ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "F:/tool/environment/msys2/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "F:/tool/environment/msys2/mingw64/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
@@ -79,7 +79,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "F:/tool/environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++;F:/tool/environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32;F:/tool/environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward;F:/tool/environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include;F:/tool/environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed;F:/tool/environment/mingw64/x86_64-w64-mingw32/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "F:/tool/environment/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++;F:/tool/environment/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32;F:/tool/environment/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward;F:/tool/environment/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include;F:/tool/environment/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed;F:/tool/environment/msys2/mingw64/x86_64-w64-mingw32/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "F:/tool/environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;F:/tool/environment/mingw64/lib/gcc;F:/tool/environment/mingw64/x86_64-w64-mingw32/lib;F:/tool/environment/mingw64/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "F:/tool/environment/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0;F:/tool/environment/msys2/mingw64/lib/gcc;F:/tool/environment/msys2/mingw64/x86_64-w64-mingw32/lib;F:/tool/environment/msys2/mingw64/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
