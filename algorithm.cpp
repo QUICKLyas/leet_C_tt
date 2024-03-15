@@ -442,6 +442,55 @@ public:
         }
         return f.back(); // 返回到最后一个几点
     }
+    /**
+     * 70. 爬楼梯 动态规划
+     * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+     * 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢
+     * @param n
+     * @return
+     */
+    int climbStairs(int n) {
+        int x_1 = 0, x_2 = 0, answer = 1;
+        for (int i = 0; i <=n; i ++){
+            x_1 = x_2;
+            x_2 = answer;
+            answer = x_2 + x_1;
+        }
+        return answer;
+    }
+    /**
+     * hard hard
+     * 72. 边界距离
+     * 给你两个单词 word1 和 word2，
+     * 请返回将 word1 转换成 word2 所使用的最少操作数  。
+     * 你可以对一个单词进行如下三种操作：
+     * 插入一个字符
+     * 删除一个字符
+     * 替换一个字符
+     * @param word1
+     * @param word2
+     * @return
+     */
+    int minDistance(string word1, string word2) {
+        int m = word1.size(), n = word2.size();
+        vector<int> dp(n + 1);
+        for (int i = 0; i <= n; ++i)    dp[i] = i;
+        for (int i = 1; i <= m; ++i) {
+            int pre = dp[0]; // 这两句是精髓，很重要
+            dp[0] = i;
+            for (int j = 1; j <= n; ++j) {
+                int temp = dp[j];
+                if (word1[i - 1] == word2[j - 1]) {
+                    dp[j] = pre; // 不用考虑不匹配
+                } else {
+                    dp[j] = min( {dp[j], dp[j - 1], pre} ) + 1;
+                }
+                pre = temp;
+            }
+        }
+        return dp[n];
+    }
+
 };
 
 int main () {
