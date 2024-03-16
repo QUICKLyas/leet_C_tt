@@ -44,7 +44,7 @@ public:
                 return memo[x][y];
             }
 
-            long long ret = value.count({x, y}) ? value[{x, y}]:0);
+            long long ret = (value.count({x, y}) ? value[{x, y}]:0);
             if (x > 1) {
                 for (int i = 1; i < x; i++) {
                     ret = max(ret, dfs (i, y) + dfs(x-i, y));
