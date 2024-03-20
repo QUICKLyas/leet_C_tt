@@ -133,6 +133,12 @@ build CMakeFiles/leetcode.dir/daily/1793.cpp.obj: CXX_COMPILER__leetcode_unscann
   OBJECT_DIR = CMakeFiles\leetcode.dir
   OBJECT_FILE_DIR = CMakeFiles\leetcode.dir\daily
 
+build CMakeFiles/leetcode.dir/daily/1969.cpp.obj: CXX_COMPILER__leetcode_unscanned_Debug F$:/IDE/_CodeSpace/Proc/cpp/leetcode/leet_C_tt/daily/1969.cpp || cmake_object_order_depends_target_leetcode
+  DEP_FILE = CMakeFiles\leetcode.dir\daily\1969.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\leetcode.dir
+  OBJECT_FILE_DIR = CMakeFiles\leetcode.dir\daily
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target leetcode
@@ -141,7 +147,7 @@ build CMakeFiles/leetcode.dir/daily/1793.cpp.obj: CXX_COMPILER__leetcode_unscann
 #############################################
 # Link the executable leetcode.exe
 
-build leetcode.exe: CXX_EXECUTABLE_LINKER__leetcode_Debug CMakeFiles/leetcode.dir/algorithm.cpp.obj CMakeFiles/leetcode.dir/daily/225.cpp.obj CMakeFiles/leetcode.dir/daily/299.cpp.obj CMakeFiles/leetcode.dir/daily/1261.cpp.obj CMakeFiles/leetcode.dir/daily/2789.cpp.obj CMakeFiles/leetcode.dir/daily/2129.cpp.obj CMakeFiles/leetcode.dir/daily/2368.cpp.obj CMakeFiles/leetcode.dir/daily/2386.cpp.obj CMakeFiles/leetcode.dir/daily/2575.cpp.obj CMakeFiles/leetcode.dir/daily/2834.cpp.obj CMakeFiles/leetcode.dir/daily/2312.cpp.obj CMakeFiles/leetcode.dir/daily/2684.cpp.obj CMakeFiles/leetcode.dir/daily/310.cpp.obj CMakeFiles/leetcode.dir/daily/1793.cpp.obj
+build leetcode.exe: CXX_EXECUTABLE_LINKER__leetcode_Debug CMakeFiles/leetcode.dir/algorithm.cpp.obj CMakeFiles/leetcode.dir/daily/225.cpp.obj CMakeFiles/leetcode.dir/daily/299.cpp.obj CMakeFiles/leetcode.dir/daily/1261.cpp.obj CMakeFiles/leetcode.dir/daily/2789.cpp.obj CMakeFiles/leetcode.dir/daily/2129.cpp.obj CMakeFiles/leetcode.dir/daily/2368.cpp.obj CMakeFiles/leetcode.dir/daily/2386.cpp.obj CMakeFiles/leetcode.dir/daily/2575.cpp.obj CMakeFiles/leetcode.dir/daily/2834.cpp.obj CMakeFiles/leetcode.dir/daily/2312.cpp.obj CMakeFiles/leetcode.dir/daily/2684.cpp.obj CMakeFiles/leetcode.dir/daily/310.cpp.obj CMakeFiles/leetcode.dir/daily/1793.cpp.obj CMakeFiles/leetcode.dir/daily/1969.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\leetcode.dir
