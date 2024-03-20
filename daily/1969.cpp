@@ -29,7 +29,7 @@ public:
 
     long long fastPow(long long x,long long n,long long mod) {
         long long res = 1;
-        for (; n != 0;n >> 1) {
+        for (; n != 0;n >>= 1) {
             if (n & 1) {
                 res = res* x %mod;
             }
