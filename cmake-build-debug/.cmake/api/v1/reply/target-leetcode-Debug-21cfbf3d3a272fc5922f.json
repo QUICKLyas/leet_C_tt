@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 24,
+				"line" : 25,
 				"parent" : 0
 			}
 		]
@@ -68,7 +68,8 @@
 				13,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		}
 	],
@@ -121,7 +122,8 @@
 				13,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		}
 	],
@@ -227,6 +229,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "daily/518.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "daily/2642.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -19,6 +19,7 @@ set(SOURCE_FILES
         daily/1793.cpp
         daily/1969.cpp
         daily/322.cpp
-        daily/518.cpp # hard
+        daily/518.cpp
+        daily/2642.cpp # hard
 )
 add_executable(leetcode ${SOURCE_FILES})
